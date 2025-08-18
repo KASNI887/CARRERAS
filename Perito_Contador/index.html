@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERITO CONTADOR</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0b1f3a; /* Azul marino */
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: #102846; /* Azul marino más claro */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #1c3c66;
+    }
+
+    .main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+.main img {
+  width: 1310px;
+  height: auto;
+  border-radius: 0;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: block;
+    } 
+
+    .main p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+      footer {
+      background-color: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+    
+footer, footer * {
+  color: #eaf1f5 !important;
+}
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .main img {
+        width: 90%;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li a {
+        text-align: center;
+        padding: 12px;
+      }
+    }
+
+    .fuente-especial {
+  font-family: 'Arial Narrow', Times, serif;
+  font-size: 18px;
+}
+  </style>
+</head>
+<body>
+<header>
+    <img src="logocv.png" alt="logocv" />
+    <h1>PERITO CONTADOR</h1>
+  </header>
+  <div class="main">
+   <div id="menu"></div>
+
+<table style="margin: 50px auto; border-collapse: collapse; width: 80%; background: #102846; box-shadow: 0 2px 8px rgba(0,0,0,0.08);border-radius: 30px;">
+  <tr>
+    <td style="width: 200px; text-align: center; padding: 40px; vertical-align: top;">
+      <img src="perito.jpg" alt="Descripción" style="width: 500px; height: auto; border-radius: 30px;">
+    </td>
+    <td class="fuente-especial" style="padding: 40px; font-size: 17px; color: #f5f4f4; text-align: left;">
+      <strong>Acerca de esta Carrera</strong><br>
+      Carrera de tres años en la cual se manejan conocimientos sobre las legislaciones financieras, toma de desiciones, conocimientos sobre auditorías empresariales y capacidad de resolución y mediación de conflictos.
+    </td>
+  </tr>
+</table>
+  <footer id="contacto">
+    <p>Dirección: Km 1.2 Altos de Bárcenas 1, Carretera Bárcenas, Villa Nueva, Guatemala</p>
+    <p>Tel: (502) 6629-3874</p>
+    <p>Correo: colegiocaminoverde@gmail.com</p>
+    <p>&copy; 2025 Colegio Camino Verde. Todos los derechos reservados.</p>
+  </footer>
+      <script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("menu.html")
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            document.getElementById("menu").innerHTML = datos;
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+</script>
+</body>
+</html>

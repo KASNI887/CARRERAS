@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos Académicos</title>
+   <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .proyecto {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .proyecto img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .contenido {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .contenido h2 {
+      color: #0b1f3a;
+      margin-top: 0;
+    }
+
+    .contenido p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .proyecto {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .proyecto img {
+        width: 100%;
+      }
+
+      .contenido {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Proyectos Académicos</h1>
+  </header>
+<div id="menu"></div>
+  <div class="container">
+
+    <!-- Proyecto 1 -->
+    <div class="proyecto">
+      <img src="f4.jpg" alt="Feria Tecnológica" />
+      <div class="contenido">
+        <h2>Feria Tecnológica</h2>
+        <p>Un espacio donde los estudiantes presentan innovaciones, experimentos y prototipos tecnológicos creados durante el ciclo escolar, demostrando creatividad, lógica y conocimiento en computación y ciencias.</p>
+      </div>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="proyecto">
+      <img src="f5.jpg" alt="Feria Matemática" />
+      <div class="contenido">
+        <h2>Feria Matemática</h2>
+        <p>Actividad donde los estudiantes aplican conceptos matemáticos en juegos, dinámicas y retos interactivos que fomentan el pensamiento crítico y la resolución de problemas de manera divertida.</p>
+      </div>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="proyecto">
+      <img src="f6.jpg" alt="Disección de Órganos" />
+      <div class="contenido">
+        <h2>Disección de Órganos</h2>
+        <p>Experiencia guiada en la que los alumnos exploran órganos reales, identifican estructuras anatómicas y comprenden funciones vitales como parte del aprendizaje en Biología y Ciencias Naturales.</p>
+      </div>
+    </div>
+
+    <!-- Proyecto 4 -->
+    <div class="proyecto">
+      <img src="f7.jpg" alt="Mantenimiento de Computadoras" />
+      <div class="contenido">
+        <h2>Mantenimiento de Computadoras</h2>
+        <p>Práctica técnica donde los estudiantes realizan limpieza interna, diagnóstico, reparación y ensamblaje de computadoras, aplicando conocimientos adquiridos en el área de hardware y soporte técnico.</p>
+      </div>
+    </div>
+
+ <!-- Proyecto 4 -->
+    <div class="proyecto">
+      <img src="f8.jpg" alt="Seminario" />
+      <div class="contenido">
+        <h2>Seminario</h2>
+        <p>asignatura orientada al desarrollo de un proyecto de investigación o acción social, en el que los estudiantes aplican conocimientos adquiridos a lo largo de la carrera. Fomenta el pensamiento crítico, el trabajo colaborativo y la solución de problemas reales en la comunidad, integrando teoría y práctica. Esta experiencia permite a los estudiantes prepararse para desafíos académicos o profesionales futuros.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p><strong>Colegio Camino Verde</strong></p>
+    <p>Dirección: Km 1.2 Altos de Bárcenas 1, Carretera Bárcenas, Villa Nueva, Guatemala</p>
+    <p>Tel: (502) 6629-3874</p>
+    <p>Correo: colegiocaminoverde@gmail.com</p>
+    <p>&copy; 2025 Colegio Camino Verde. Todos los derechos reservados.</p>
+  </footer>
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("menu.html")
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            document.getElementById("menu").innerHTML = datos;
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+</script>
+</body>
+</html>

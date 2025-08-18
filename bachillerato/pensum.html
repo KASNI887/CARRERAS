@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pensum Bachillerato en Computación</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+  background-color: #0b1f3a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px; /* <- aumentado para separar del nav */
+}
+
+    nav {
+      margin-bottom: 24px; /* <-- Agregado para separar */
+      background-color: #102846; /* Azul marino más claro */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #1c3c66;
+    }
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    } 
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+    }
+
+    .pensum-block {
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .pensum-block img {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #002147; /* Azul marino */
+      color: white;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .pensum-block {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      table, img {
+        width: 90% !important;
+      }
+    }
+  </style>
+<header>
+  <h1>Pensum Académico</h1>
+</header>
+<div id="menu"></div>
+  <div class="section"></div>
+    <!-- 4to Bachillerato -->
+    <div class="pensum-block">
+      <table>
+        <thead>
+          <tr><th>4to Bachillerato</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lengua y Literatura 4</td></tr>
+          <tr><td>Comunicación y Lenguaje L3 (Inglés Técnico) 4</td></tr>
+          <tr><td>Matemática 4</td></tr>
+          <tr><td>Física</td></tr>
+          <tr><td>Ciencias Sociales y Formación Ciudadana 4</td></tr>
+          <tr><td>Filosofía</td></tr>
+          <tr><td>Expresión Artística</td></tr>
+          <tr><td>Educación Física</td></tr>
+          <tr><td>Computación Aplicada</td></tr>
+          <tr><td>Programación</td></tr>
+          <tr><td>Sistemas e Instalación de Software</td></tr>
+          <tr><td>Contabilidad General</td></tr>
+        </tbody>
+      </table>
+      <img src="f2.jpg" alt="Estudiante computación 4to">
+    </div>
+
+    <!-- 5to Bachillerato -->
+    <div class="pensum-block">
+      <img src="f3.jpg" alt="Estudiante computación 5to">
+      <table>
+        <thead>
+          <tr><th>5to Bachillerato</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lengua y Literatura 5</td></tr>
+          <tr><td>Comunicación y Lenguaje L3 (Inglés Técnico) 5</td></tr>
+          <tr><td>Matemática 5</td></tr>
+          <tr><td>Estadística Descriptiva</td></tr>
+          <tr><td>Biología</td></tr>
+          <tr><td>Química</td></tr>
+          <tr><td>Ciencias Sociales y Formación Ciudadana 5</td></tr>
+          <tr><td>Ética Profesional y Relaciones Humanas</td></tr>
+          <tr><td>Reparación y Soporte Técnico</td></tr>
+          <tr><td>Producción de Contenidos Digitales</td></tr>
+          <tr><td>Laboratorio II</td></tr>
+          <tr><td>Práctica Supervisada</td></tr>
+          <tr><td>Seminario</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <p>Colegio Camino Verde · Dirección: Ciudad de Guatemala · Tel: (502) 6629-3874</p>
+    <p>Correo: colegiocaminoverde@gmail.com</p>
+    <p>&copy; 2025 Colegio Camino Verde. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("menu.html")
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            document.getElementById("menu").innerHTML = datos;
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+</script>
+</body>
+</html>

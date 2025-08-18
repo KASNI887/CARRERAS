@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Secretariado Bilingüe</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0b1f3a; /* Rojo oscuro */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+    }
+
+    .pensum-block {
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .pensum-block img {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #002147; /* Azul marino */
+      color: white;
+    }
+
+    footer {
+      background-color: #002147; /* Azul marino */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .pensum-block {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      table, img {
+        width: 90% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pensum Académico</h1>
+  </header>
+ <div id="menu"></div>
+  <div class="section">
+    <!-- 4to Secretariado Bilingüe -->
+    <div class="pensum-block">
+      <table>
+        <thead>
+          <tr><th>4to Secretariado Bilingüe</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Redacción y Correspondencia I</td></tr>
+          <tr><td>Orto-Caligrafía</td></tr>
+          <tr><td>Taquigrafía I</td></tr>
+          <tr><td>Mecanografía I</td></tr>
+          <tr><td>Matemática Comercial</td></tr>
+          <tr><td>Comunicación y Lenguaje 3 Idioma</td></tr>
+          <tr><td>Extranjero Inglés Comercial</td></tr>
+          <tr><td>Contabilidad</td></tr>
+		  <tr><td>Computación 1</td></tr>
+		  <tr><td>Comunicación y Lenguaje L3, Idioma Extranjero Inglés Avanzado</td></tr>
+        </tbody>
+      </table>
+      <img src="f2.jpeg" alt="Estudiante de 4to Secretariado Bilingüe">
+    </div>
+
+    <!-- 5to Secretariado Bilingüe -->
+    <div class="pensum-block">
+      <img src="f9.jpeg" alt="Estudiante de 5to Secretariado Bilingüe">
+      <table>
+        <thead>
+          <tr><th>5to Secretariado Bilingüe</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Redacción y Correspondencia II</td></tr>
+          <tr><td>Taquigrafía II</td></tr>
+          <tr><td>Mecanografía II</td></tr>
+          <tr><td>Administración y práctica de oficina</td></tr>
+          <tr><td>Taquigrafía en Inglés I</td></tr>
+          <tr><td>Inglés avanzado II</td></tr>
+          <tr><td>Catalogación y Archivo</td></tr>
+          <tr><td>Inglés Comercial II</td></tr>
+          <tr><td>Computación II</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+   <!-- 6to Secretariado Bilingüe -->
+    <div class="pensum-block">
+      <img src="f10.jpeg" alt="Estudiante de 6to Secretariado Bilingüe">
+      <table>
+        <thead>
+          <tr><th>6to Secretariado Bilingüe</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Inglés Avanzado</td></tr>
+          <tr><td>Taquigrafía en Inglés II</td></tr>
+          <tr><td>Literatura y Conversación</td></tr>
+          <tr><td>Mecanografía en Inglés</td></tr>
+          <tr><td>Traducción</td></tr>
+          <tr><td>Práctica Supervisada en Español</td></tr>
+          <tr><td>Práctica Supervisada en Inglés</td></tr>
+          <tr><td>Relaciones Humanas y Ética Profesional</td></tr> 
+          <tr><td>Estudios Socio-económicos de Guatemala</td></tr>
+          <tr><td>Computación III</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ <footer id="contacto">
+    <p><strong>Colegio Camino Verde</strong></p>
+    <p>Dirección: Km 1.2 Altos de Bárcenas 1, Carretera Bárcenas, Villa Nueva, Guatemala</p>
+    <p>Tel: (502) 6629-3874</p>
+    <p>Correo: colegiocaminoverde@gmail.com</p>
+    <p>&copy; 2025 Colegio Camino Verde. Todos los derechos reservados.</p>
+  </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("menu.html")
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            document.getElementById("menu").innerHTML = datos;
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+</script>
+</body>
+</html>

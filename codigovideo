@@ -1,0 +1,11 @@
+<video width="600" controls>
+    .main video {
+  width: 1200px;
+  height: 720px;
+  margin-bottom: 30px;
+}
+    <source src="carreras.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+
+  
