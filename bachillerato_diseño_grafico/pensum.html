@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bachillerato en Ciencias y Letras con orientación en Diseño Gráfico</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0b1f3a; /* Rojo oscuro */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+    }
+
+     .pensum-block {
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff; /* color solicitado */
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      color: #002147 ; /* texto claro sobre fondo oscuro */
+    }
+
+    /* Si mantienes clases year4/year5, también asegurarán el mismo color */
+    .pensum-block.year4,
+    .pensum-block.year5 {
+      background: #000203;
+    }
+
+    .pensum-block img {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      font-size: 16px;
+      margin: 20px;
+      color: inherit;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: inherit;
+    }
+
+    /* Títulos de las tablas con fondo negro */
+    th {
+      background-color: #002147; /* fondo negro */
+      color: #ffffff; /* texto blanco */
+      text-align: center;
+      font-weight: 700;
+      padding: 16px;
+    }
+
+    footer {
+      background-color: #002147; /* Azul marino */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .pensum-block {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      table, img {
+        width: 90% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pensum Académico</h1>
+  </header>
+ <div id="menu"></div>
+  <div class="section">
+    <!-- 4to Bachillerato -->
+    <div class="pensum-block">
+      <table>
+        <thead>
+          <tr><th>4to Bachillerato en Ciencias y Letras con orientación en Diseño Gráfico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lengua y Literatura 4</td></tr>
+          <tr><td>Inglés Técnico 4</td></tr>
+          <tr><td>Tecnología de Información y Comunicación 4</td></tr>
+          <tr><td>Matemática 4</td></tr>
+          <tr><td>Física</td></tr>
+          <tr><td>Ciencias Sociales y Formación Ciudadana</td></tr>
+          <tr><td>Psicología Industrial</td></tr>
+          <tr><td>Historial del Arte I</td></tr>
+		      <tr><td>Filosofía</td></tr>
+		      <tr><td>Educación Física</td></tr>
+          <tr><td>Fundamentación del Diseño</td></tr>
+          <tr><td>Cromatología del Color</td></tr>
+          <tr><td>Diseño Gráfico Computarizado I</td></tr>
+          <tr><td>Elaboración y Gestión de Proyectos</td></tr>
+          </tbody>
+      </table>
+      <img src="diseño2.jpg" alt="Estudiante de 4to Bachillerato en Ciencias y Letras con orientación en Diseño Gráfico">
+    </div>
+
+    <!-- 5to Bachillerato  -->
+    <div class="pensum-block">
+      <img src="diseño3.jpg" alt="Estudiante de 5to Bachillerato en Ciencias y Letras con orientación en Diseño Gráfico">
+      <table>
+        <thead>
+          <tr><th>5to Bachillerato en Ciencias y Letras con orientación en Diseño Gráfico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lengua y Literatura 5</td></tr>
+          <tr><td>Inglés Técnico 5</td></tr>
+          <tr><td>Tecnología de Información y Comunicación 5</td></tr>
+          <tr><td>Matemática 5</td></tr>
+          <tr><td>Estadística Descriptiva</td></tr>
+          <tr><td>Biología</td></tr>
+          <tr><td>Química</td></tr>
+          <tr><td>Ciencias Sociales y Formación Ciudadana</td></tr>
+          <tr><td>Historial del Arte II</td></tr>
+          <tr><td>Expresión Artística</td></tr>
+          <tr><td>Diseño y Expresión Gráfica</td></tr>
+          <tr><td>Diseño Gráfico Computarizado II</td></tr>
+          <tr><td>Seminario</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ <footer id="contacto">
+    <p><strong>Colegio Camino Verde</strong></p>
+    <p>Dirección: Km 1.2 Altos de Bárcenas 1, Carretera Bárcenas, Villa Nueva, Guatemala</p>
+    <p>Tel: (502) 6629-3874</p>
+    <p>Correo: colegiocaminoverde@gmail.com</p>
+    <p>&copy; 2025 Colegio Camino Verde. Todos los derechos reservados.</p>
+  </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("menu.html")
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            document.getElementById("menu").innerHTML = datos;
+        })
+        .catch(error => console.error("Error al cargar el menú:", error));
+});
+</script>
+</body>
+</html>
